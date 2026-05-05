@@ -1,0 +1,45 @@
+Part A: Bubble Sort
+
+1. The program is compiled and ran correctly, generated 5000 random numbers, sorted them correctly using bubble sort and
+wrote to output-NP.txt with the elapsed time. The picture 1.png demonstrates that the elapsed time for this was 0.045218s.
+
+2. The program divides the same 5000 numbers from the NP file into two sublists of 2500 elements each. This can be seen on 
+the picture 2.png, as all the numbers are the same. The picture also shows the elapsed time is 0.020216s.
+
+3.This difference between the elapsed time occurs because sorting one list of 5000 elements requires much more work than
+sorting two lists of 2500 elements and merge them. This reduces the cost of bubble sort by applying it to smaller lists
+since it has quadratic time complexity. The random numbers were made identical by making the use of the same seed on the
+line "srand(12345)".
+
+4. The bubble sort becomes cheaper every time we divide the input into more parts. However, the extreme partition (one
+element on each list), reduces the work done by the bubble sort but it shifts the problem into the merge phase. If merge
+is done efficiently the total performance can improve, however if the partitioning is excessive or merging is not handled
+well the benefit may decrease.
+
+Part B: Matrix Multiplication
+
+5. The matrix multiplication program compiled and ran correctly for N = 3. The output matrix matched the expected result,
+and it can be checked on the screenshot 5.png.
+
+6. All six outputs displayed the same matrix. This happens because the multiplication kernel does not change, only the 
+loop order changed.
+
+7. The outputs were the same for all six loops orderings, the only difference was the time to complete each multiplication.
+The time for each case is:
+ikj = 0.547698 s
+kij = 0.565451 s
+jik = 0.963736 s
+ijk = 1.053604 s
+jki = 1.756378 s
+kji = 2.077949 s
+"ikj" is the fastest multiplication, while "kji" is the slowest. This shows that loop ordering has a major effect on the
+performance, even though it does not change correctness.
+
+8. The speedup comes from better memory access patterns and improved cache usage. C stores matrices in row-major order. 
+Some loop orders access memory sequentially across rows, which is cache-friendly and faster. Other loop orders jump around
+memory in less efficient patterns, causing more cache misses and slower performance.
+
+9. I successfully completed the Bubble Sort and matrix multiplication parts of the lab, generated the required output files,
+and recorded the elapsed times. I also verified correctness by comparing the outputs with diff. One difficulty was that the
+matrix output files for N = 1000 were very large, so manual checking was impractical, but diff confirmed that the matrix 
+contents matched.
