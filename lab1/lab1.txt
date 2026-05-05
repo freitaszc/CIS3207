@@ -1,0 +1,14 @@
+My computer is a MacOS, so I used the terminal to perform every action.
+
+I used ssh tur82110@cis-linux2.temple.edu to access my Linux2 account.
+
+After that I created the directory public_html and set the permission to 755. Changing the f>
+
+I did the same exact thing inside the home folder.
+
+I created the file index.html inside the home public_html, and then added the “Hello World! >
+
+Lastly, I changed it to Illegal Access.
+
+
+
