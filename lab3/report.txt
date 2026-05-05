@@ -1,0 +1,19 @@
+In order to complete this lab, I completed the bubble sort without many problems. I used the time.h library to calculate
+the elapsed time for sorting, and everything was being sorted correctly.
+
+In order to complete the buffer overflow portion, I had some tweaks and problems to solve. At first, I wrote code
+that successfully checked the password using fgets, so buffer overflows were not a possibility. Then, in order to
+complete the assignment, I used scanf to create the overflow. The first versions of the code were correctly overflowing
+the password; however, the inputted password was not matching the new overflowed password in size, so I was receiving
+an incorrect error even though the data was being overflowed.
+
+To solve this, I substituted strcmp and used a check_password function that checked whether all the characters of the
+expected password existed in the input in sequence. This function did not check for length. If I input incorrect values,
+the program would display “access denied,” but if I overflowed the value with a sequence of characters, access would be
+granted.
+
+I tried four inputs for the expected password "Gabriel123", as you can see in bufferoverflow2.png:
+1. gabriel123 - access denied
+2. Gabriel123 - access granted
+3. aaaa - access denied
+4. aaaaaaaaaaaaaaaaaaaa - access granted (overflow)
