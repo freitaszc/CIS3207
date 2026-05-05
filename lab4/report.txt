@@ -1,0 +1,89 @@
+In order to complete this assignment I used three different LLMs: ChatGPT 5.2 and Gemini 3 Pro and Claude. The ChatGPT 
+code worked very well with good structure and explanations throughout the code. Furthermore, Gemini's code was incomplete, 
+as some commands that I tried did not work on it. However I inspired and merged the qualities from all shells while 
+also adding the required features to create my own shell. 
+
+Intepretations on each AI code: 
+
+1. ChatGPT code (debug notes)
+*Parser: It tokenizes the input into an argv array and NULL-terminates it so execvp() can run it. This made commands like 
+ls -l and echo hi work immediately.
+*fork(): It creates a child process to run the command, while the parent stays as the shell. I verified this because the 
+prompt returns only after the child finishes.
+*execv/execvp(): The child replaces itself with the requested program. If exec fails, it prints an error and exits, which 
+helped me debug typos like lss.
+*wait/waitpid(): The parent waits for the child to finish so outputs don’t overlap with the next prompt. Without wait, I 
+saw the prompt appear before the command finished.
+*Result: This version was the most stable starting point for the “basic shell loop”.
+
+2. Claude code
+*Parser: Similar token splitting, but the main benefit was how it structured piping/redirection logic more clearly.
+*fork(): It correctly forks multiple children for piped commands (or at least cleanly separates the “left child” and 
+“right child”).
+*execv/execvp(): Each child execs the correct side of the pipe after setting up file descriptors.
+*wait/waitpid(): It waits for both children in the pipeline so no zombie processes remain.
+*Result: This version helped the most for understanding pipe() + dup2() + running two commaxnds connected together.
+
+3. Gemini code
+*Parser: It tokenizes input, but in my tests it had edge-case issues (missing NULL termination / inconsistent handling 
+of multiple spaces) depending on the output version.
+*fork(): The overall idea was right, but some versions didn’t fully check fork errors or handle child/parent branches 
+cleanly.
+*execv/execvp(): I saw exec failures that weren’t reported clearly, so it was harder to debug compared to the other two.
+*wait/waitpid(): Some versions either waited incorrectly or didn’t wait in all paths, which can cause prompt timing issues.
+*Result: This version was useful for ideas, but it was not the best “working baseline” compared to ChatGPT/Claude.
+
+-> Interpretation of the code functions from *MY SHELL*:
+
+1. parse_input():
+Splits the input line into tokens using strtok() and stores them in a dynamically growing args array using malloc() and realloc(). 
+The array is NULL-terminated so it can be passed directly to execvp().
+
+2. extract_redirect():
+Scans the argument list for either > or >>. If found, it stores the output filename, removes the redirection operator and filename 
+from the argument list by shifting the remaining tokens, and sets an append flag (0 for > and 1 for >>). It returns 1 when a 
+redirection is found, -1 if the operator has no filename, and 0 if there is no redirection.
+
+3. split_pipes():
+Splits the command into multiple pipeline stages. It scans the argument list for the pipe symbol, replaces each pipe with NULL to 
+terminate the previous stage’s argv, and records pointers to the start of each stage. It returns the number of stages created or -1 
+if the pipe syntax is invalid.
+
+4. exec_pipe():
+Implements a single pipe between two commands by creating a pipe, forking two child processes, connecting the left command’s stdout 
+to the pipe write end and the right command’s stdin to the pipe read end using dup2(), and optionally redirecting the right command’s 
+output to a file. The parent closes the pipe file descriptors and waits for both children.
+
+5. main():
+Prints the gabshell prompt, reads a full line using getline(), tokenizes the input, and handles built-in commands exit and cd. It 
+then counts pipe symbols and validates pipe syntax (rejecting trailing pipes and double pipes). If pipes are present, it dynamically 
+allocates an array of pipeline stages, splits the command into stages, and executes an N-stage pipeline by forking N child processes 
+and connecting them with pipes using dup2(). Output redirection (either > or >>) is applied only to the last stage of the pipeline. 
+If no pipes are present, it checks for redirection and executes a single command using fork() and execvp(), while the parent waits.
+
+6. Arbitrarily long commands and dynamic support:
+The shell supports long input lines because it uses getline(), which relies on the read() system call. It supports a variable number 
+of arguments by growing the args array with realloc(). It supports an arbitrary number of pipeline stages by counting the number of 
+pipes and dynamically allocating the stages array with malloc() based on that count.
+
+7. System calls used:
+getline()/read(), fork(), execvp(), waitpid(), pipe(), dup2(), open(), close(), chdir(), and _exit().
+
+-> How does memory allocation works in C:
+C has three different ways of allocating memory: static allocation, automatic allocation, and dynamic allocation.
+When the code uses local variables (automatic allocation), the data is stored from when the function starts until 
+the function returns. Static allocation is used for global variables. If dynamic allocation is used, the data is 
+stored on the Heap and  it persists until using the free() command. In the code above, malloc is used to allocate 
+an unitialized memory on the Heap, and realloc is used to resize an existing memory block or moving it to a new 
+location if the current spot is too full. 
+
+
+->Extra credit
+
+1. Multiple pipes:
+The shell supports commands with multiple pipes, such as ls -l | grep Name | wc, by splitting the input into N stages and forking N 
+processes connected with N−1 pipes.
+
+2. Append redirection (>>):
+The shell supports >> by detecting it during parsing, setting the append flag, and opening the output file with O_APPEND. This works 
+for both single commands and the final stage of a pipeline, matching standard shell behavior.
