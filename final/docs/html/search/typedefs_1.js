@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['cid_5fadduser_5fot_0',['cid_adduser_ot',['../synergy_8h.html#ace6a0c56828362d77e19d1ff1209e8ac',1,'synergy.h']]],
+  ['cid_5fdeleteuser_5fit_1',['cid_deleteuser_it',['../synergy_8h.html#a7615bbdea17700ec03f687ab62e06f98',1,'synergy.h']]],
+  ['cid_5fdeleteuser_5fot_2',['cid_deleteuser_ot',['../synergy_8h.html#a1210dd5b97fffa9fa75864c9614664e3',1,'synergy.h']]],
+  ['cid_5fdetectproc_5fot_3',['cid_detectproc_ot',['../synergy_8h.html#ac46684c0081180a30393d4e1904b74e3',1,'synergy.h']]],
+  ['cid_5fexeccomponent_5fot_4',['cid_execcomponent_ot',['../synergy_8h.html#a84716fc719a62d7a15a30b80b71da016',1,'synergy.h']]],
+  ['cid_5fexit_5fot_5',['cid_exit_ot',['../synergy_8h.html#a48156bc264e561c02d5ed7e8787bab77',1,'synergy.h']]],
+  ['cid_5fexit_5fprocess_5fot_6',['cid_exit_process_ot',['../synergy_8h.html#aa8a46d92a69363e9d8b862432abba61e',1,'synergy.h']]],
+  ['cid_5ffileput_5fot_7',['cid_fileput_ot',['../synergy_8h.html#af3e0a05bc437e658c277c7eecf2b0c1a',1,'synergy.h']]],
+  ['cid_5fgetapp_5fot_8',['cid_getapp_ot',['../synergy_8h.html#a4b799cc6605e3f1e77d263a4674a3500',1,'synergy.h']]],
+  ['cid_5fgetapptable_5fit_9',['cid_getapptable_it',['../synergy_8h.html#ad02a211fc7bee79e6d6be0d82a2246db',1,'synergy.h']]],
+  ['cid_5fgetapptable_5fot1_10',['cid_getapptable_ot1',['../synergy_8h.html#ac1361c83512c478ad386784570726ec8',1,'synergy.h']]],
+  ['cid_5fgetfulltable_5fot1_11',['cid_getfulltable_ot1',['../synergy_8h.html#a8b8561e0fef5bfb67bebb3c21637c135',1,'synergy.h']]],
+  ['cid_5fkillall_5fot_12',['cid_killall_ot',['../synergy_8h.html#aa56314820c835c5d5255fb18f161ff1b',1,'synergy.h']]],
+  ['cid_5fping_5fit_13',['cid_ping_it',['../synergy_8h.html#a87049eb14f45f878c600e83c86dc011c',1,'synergy.h']]],
+  ['cid_5fping_5fot_14',['cid_ping_ot',['../synergy_8h.html#a4513f78b7abda729a6a7a57ca24ad372',1,'synergy.h']]],
+  ['cid_5fpingapp_5fit_15',['cid_pingapp_it',['../synergy_8h.html#a28810ba46f2b012888bea8f6ee526039',1,'synergy.h']]],
+  ['cid_5fpingapp_5fot_16',['cid_pingapp_ot',['../synergy_8h.html#a73d5bdcd889b6a6e0c949483d081cf52',1,'synergy.h']]],
+  ['cid_5frecieve_5fbc_17',['cid_recieve_bc',['../synergy_8h.html#a32057ce44509c585659f69a351d933e5',1,'synergy.h']]],
+  ['cid_5fremove_5fot_18',['cid_remove_ot',['../synergy_8h.html#a503f318424fe06f1653426b15e0cc835',1,'synergy.h']]],
+  ['cid_5fverifyhandler_5fot_19',['cid_verifyhandler_ot',['../synergy_8h.html#a4b8fc6e687821c2071482587e4e337cb',1,'synergy.h']]],
+  ['cid_5fverifyprocess_5fot_20',['cid_verifyprocess_ot',['../synergy_8h.html#a18fa55f9a68b8f75c6b0af9e3ad2ac98',1,'synergy.h']]],
+  ['cid_5fverifyuser_5fit_21',['cid_verifyuser_it',['../synergy_8h.html#ab76edabdea18db4c52a9d55a0339d274',1,'synergy.h']]],
+  ['cid_5fverifyuser_5fot_22',['cid_verifyuser_ot',['../synergy_8h.html#a02d0fdfff6afda54c8026afad974e781',1,'synergy.h']]]
+];

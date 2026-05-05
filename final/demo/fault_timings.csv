@@ -1,0 +1,2 @@
+mode,run_id,matrix_size,workers,granularity,kills_requested,kills_done,killed_pids,elapsed_seconds,status
+random_kill,50,32,4,8,1,1,3202432;,9.116739,completed

@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['r_5fdebug_0',['r_debug',['../structcid__exectsh__it.html#af69470ecae151606b42e2bffebc4955e',1,'cid_exectsh_it']]],
+  ['random_20workers_1',['How to kill random workers?',['../index.html#autotoc_md34',1,'']]],
+  ['randomly_20kill_20worker_20processes_20record_20your_20performance_20changes_2',['4. Test fault tolerance by randomly kill worker processes. Record your performance changes.',['../index.html#autotoc_md33',1,'']]],
+  ['re_20issuing_20a_20suspected_20lost_20tuple_20and_20redundant_20tuple_20result_20elimination_3',['2. Revise the parallel program to allow processors to fail by timeout alarm signal handler (re-issuing a suspected lost tuple) and redundant tuple result elimination.',['../index.html#autotoc_md30',1,'']]],
+  ['readme_2emd_4',['README.md',['../README_8md.html',1,'']]],
+  ['readn_5',['readn',['../netlib_8c.html#ad2f42e6a26b990b2ed328d289f6faf23',1,'readn(int sd, char *ptr, int nbytes):&#160;netlib.c'],['../synergy_8h.html#a5917c7952d18f8feadcd5e0fcef503d1',1,'readn(int, char *, int):&#160;netlib.c']]],
+  ['ready_6',['READY',['../synergy_8h.html#ad1235d5ce36f7267285e82dccd428aa6',1,'synergy.h']]],
+  ['record_20elapsed_20times_20for_20each_20size_7',['1. Find a way to change parallel task granularity and build a script to run the parallel matrix program automatically with different granularity. Record elapsed times for each size.',['../index.html#autotoc_md29',1,'']]],
+  ['record_20your_20performance_20changes_8',['4. Test fault tolerance by randomly kill worker processes. Record your performance changes.',['../index.html#autotoc_md33',1,'']]],
+  ['redundant_20tuple_20result_20elimination_9',['2. Revise the parallel program to allow processors to fail by timeout alarm signal handler (re-issuing a suspected lost tuple) and redundant tuple result elimination.',['../index.html#autotoc_md30',1,'']]],
+  ['ref_5fname_10',['ref_name',['../structdac__link__ot.html#a126014db14a13d38884bfdd46c978ced',1,'dac_link_ot']]],
+  ['report_11',['How to write final project report?',['../index.html#autotoc_md40',1,'']]],
+  ['request_12',['request',['../structt__queue.html#abdaf5fca96b82dc5ab80923ede699b6a',1,'t_queue']]],
+  ['result_20elimination_13',['2. Revise the parallel program to allow processors to fail by timeout alarm signal handler (re-issuing a suspected lost tuple) and redundant tuple result elimination.',['../index.html#autotoc_md30',1,'']]],
+  ['results_14',['5. Master Crashing While Waiting for Results',['../index.html#autotoc_md16',1,'']]],
+  ['retransmit_15',['How to Master timeout/retransmit?',['../index.html#autotoc_md35',1,'']]],
+  ['retrieve_16',['retrieve',['../tsh_8h.html#a549a949da0a492747bd4c34a72f9169b',1,'tsh.h']]],
+  ['retstatus_17',['retstatus',['../structdac__exitprocess__it.html#a4e8e0e16f01667fe060bf3724b47dd0f',1,'dac_exitprocess_it::retstatus'],['../structdac__getstatus__ot.html#a4fe856c98c2d68873d8430c7c44fc2c8',1,'dac_getstatus_ot::retstatus']]],
+  ['revise_20the_20parallel_20program_20to_20allow_20processors_20to_20fail_20by_20timeout_20alarm_20signal_20handler_20re_20issuing_20a_20suspected_20lost_20tuple_20and_20redundant_20tuple_20result_20elimination_18',['2. Revise the parallel program to allow processors to fail by timeout alarm signal handler (re-issuing a suspected lost tuple) and redundant tuple result elimination.',['../index.html#autotoc_md30',1,'']]],
+  ['rlogin_19',['rlogin',['../structcid__fileput__it.html#a83510f99de3091bcb4cc3c33ae2bd3ec',1,'cid_fileput_it::rlogin'],['../structcid__verifyhandler__it.html#ac11077b33bafb28a0aaaf02a06b86f47',1,'cid_verifyhandler_it::rlogin'],['../structcid__remove__it.html#af08448416ec97c3561315c3dc31e14f5',1,'cid_remove_it::rlogin'],['../structcid__execcomponent__it.html#a55026db3127b3b934f4ca0004fa1a208',1,'cid_execcomponent_it::rlogin'],['../structcid__exectsh__it.html#a2451af39f285681701af19a4d357d2e2',1,'cid_exectsh_it::rlogin'],['../structcid__fileget__it.html#a8d1a13e39195ef995aae2221d218e9b1',1,'cid_fileget_it::rlogin'],['../structcid__verifyprocess__it.html#aaf35358eca0715e13f7845166901ede7',1,'cid_verifyprocess_it::rlogin']]],
+  ['run_205_20workers_20in_20parallel_20',['1. How will run 5 workers in parallel?',['../index.html#autotoc_md24',1,'']]],
+  ['run_20the_20parallel_20matrix_20program_20automatically_20with_20different_20granularity_20record_20elapsed_20times_20for_20each_20size_21',['1. Find a way to change parallel task granularity and build a script to run the parallel matrix program automatically with different granularity. Record elapsed times for each size.',['../index.html#autotoc_md29',1,'']]],
+  ['running_22',['RUNNING',['../synergy_8h.html#a6fb7181d994ee98e735494be55809708',1,'synergy.h']]],
+  ['running_20master_23',['2. How to control granularity (G) running master?',['../index.html#autotoc_md25',1,'']]],
+  ['runs_20with_20different_20g_20values_24',['How to automate parallel runs with different G values?',['../index.html#autotoc_md36',1,'']]]
+];

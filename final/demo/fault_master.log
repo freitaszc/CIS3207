@@ -1,0 +1,15 @@
+Timeout: reissued TASK_50_0 attempt 2
+Timeout: reissued TASK_50_1 attempt 2
+Timeout: reissued TASK_50_2 attempt 2
+Timeout: reissued TASK_50_3 attempt 2
+Timeout: reissued TASK_50_3 attempt 3
+Ignoring duplicate RESULT_0
+Ignoring duplicate RESULT_1
+Ignoring duplicate RESULT_2
+Timeout: reissued TASK_50_3 attempt 4
+Timeout: reissued TASK_50_3 attempt 5
+Matrix size: 32
+Workers: 4
+Granularity: 8
+Total tasks: 4
+Elapsed time: 9.116739 seconds
