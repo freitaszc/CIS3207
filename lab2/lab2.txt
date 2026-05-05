@@ -1,0 +1,17 @@
+1. List all typical file operations.
+The basic file operations are create, delete, close, open. The Internal I/O operations are read, write, append, seek and truncate.Rename, copy and move are management operations.
+2. What are the speed differences between file accesses and the keyboard/screen (input/output) operations?
+The file access (SSD) latency is approximately 0.1 millisecond, while the keyboard input are between 10 to 50 milliseconds.
+3. What are the speed differences between disk file accesses and memory accesses?
+The disk file access, such as the SSD (50-150 microseconds) and the HDD (5-10 milliseconds) are very slow. Meanwhile, the memory access with RAM (50-100 nanoseconds), and it is extremely fast.
+4. What generation is your OS?
+My macbook M$ is 4th generation.
+5. Why an application needs to call for OS services? Give three examples.
+Applications might need to call the OS because it does not have access to hardware or to critical resources. One example is file accessing, as when one application wants to read or edit a file it must ask for permission from the OS. Memory management also needs to be approved by the OS and accessing I/O operations, like on keyboards, mouses and networks.
+6. What kinds of tools would be required to integrate into a networked application? Feel free to check the Internet or ChatGPT.
+API/communication libraries, development tools, like VSCode and other IDEs/SDKs, and security tools, testing and monitoring.
+7. Revise “public_html/index.html” to show “Illegal Access” to fend off unwanted visits. Verify the update works correctly.
+8. Create “lab1, lab2, lab3, … lab7” subfolders under “putlic_html”.
+9. Set the lab1-7 folders to permission x700. What does this mean?
+This means only me, the owner, can access the folders, having permissions to read, write and execute.
+10. Copy all lab1 contents to the folder “lab1” and lab2 to “lab2” folder.
